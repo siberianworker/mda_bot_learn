@@ -59,8 +59,18 @@ ikzad = InlineKeyboardMarkup(row_width=2)
 zad_vid1 = InlineKeyboardButton(text='Видео 1 часть', url='https://youtu.be/DWcpuXONPho')
 zad_vid2 = InlineKeyboardButton(text='Видео 2 часть', url='https://youtu.be/Cnn88_iVUqc')
 zad_url = InlineKeyboardButton(text='Регистрация', url='https://zadarma.com/ru/?ref=dcf761984bc63ea302d80c33bd61361f')
-#next_zad1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad1')
-ikzad.add(zad_vid1, zad_vid2).add(zad_url).add(home, back_sms)
+next_zad = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad')
+ikzad.add(zad_vid1, zad_vid2).add(zad_url).add(next_zad).add(home, back_sms)
+
+ikzad1 = InlineKeyboardMarkup(row_width=2)
+next_zad1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad1')
+back_zad1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad1')
+ikzad1.add(next_zad1).add(back_zad1, home)
+
+ikzad2 = InlineKeyboardMarkup(row_width=2)
+#next_serv = InlineKeyboardButton(text='Продолжить ✅', callback_data='run_serv')
+back_zad2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad2')
+ikzad2.add(back_zad2, home)
 
 #Плюсофон
 ikplus = InlineKeyboardMarkup(row_width=2)

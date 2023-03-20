@@ -1,6 +1,5 @@
 from aiogram import types, Dispatcher
 from aiogram.types import InputMediaPhoto
-
 from create_bot import dp, bot
 from keyboards import client_kb
 from information import base
@@ -15,8 +14,14 @@ from information import base
 
 #Скачать шаблон
 #a1 = 'AgACAgIAAxkBAAOJZBG8JlY8Lf_mzdIvJed1A18yj8UAAkDFMRtdjpFI-cEbWykYWaEBAAMCAAN4AAMvBA'
-a1 = 'AgACAgIAAxkBAAOLZBG8UHDAENxv4hmz_EkEVg4xOncAAkLFMRtdjpFI6oXhDFP3l0YBAAMCAAN5AAMvBA'
 #media_group1 = [a1, a2]
+
+#Хеш картинок
+shablon = 'AgACAgIAAxkBAAOLZBG8UHDAENxv4hmz_EkEVg4xOncAAkLFMRtdjpFI6oXhDFP3l0YBAAMCAAN5AAMvBA'
+zadarma_1 = 'AgACAgIAAxkBAAIB2GQYS8VougW1bM8XjRNSkvedaVmHAALb4DEboU3ASAHbssCutlfiAQADAgADeQADLwQ'
+img_zad1 = InputMediaPhoto(zadarma_1, base.zad1)
+zadarma_2 = 'AgACAgIAAxkBAAIB4WQYX0y8PMnnuVVcmjAxhQ_HHmljAAJn4TEboU3ASI3wWw4ioyCmAQADAgADeQADLwQ'
+img_zad2 = InputMediaPhoto(zadarma_2, base.zad2)
 
 
 #Команда /start
@@ -32,7 +37,7 @@ async def first_call(callback: types.CallbackQuery):
 
         await callback.message.answer(text=base.welcome, reply_markup=client_kb.ika)
     elif callback.data == 'run':
-        await callback.message.answer_photo(a1, base.run, reply_markup=client_kb.ikb)
+        await callback.message.answer_photo(shablon, base.run, reply_markup=client_kb.ikb)
         await callback.message.delete()
     elif callback.data == 'run1':
 #        await callback.message.edit_media(file2, reply_markup=client_kb.ikc)
@@ -54,6 +59,12 @@ async def first_call(callback: types.CallbackQuery):
     #Задарма
     elif callback.data == 'run_zad':
         await callback.message.edit_text(base.run_zadarma, reply_markup=client_kb.ikzad)
+    elif callback.data == 'next_zad':
+        await callback.message.answer_photo(zadarma_1, base.zad1, reply_markup=client_kb.ikzad1)
+        await callback.message.delete()
+    elif callback.data == 'next_zad1':
+        await callback.message.edit_media(img_zad2, reply_markup=client_kb.ikzad2)
+
     #Плюсофон
     elif callback.data == 'run_plus':
         await callback.message.edit_text(base.run_plusofon, reply_markup=client_kb.ikplus)
@@ -61,7 +72,7 @@ async def first_call(callback: types.CallbackQuery):
 
     #Назад
     elif callback.data == 'back':
-        await callback.message.answer_photo(a1, base.run, reply_markup=client_kb.ikb)
+        await callback.message.answer_photo(shablon, base.run, reply_markup=client_kb.ikb)
         await callback.message.delete()
     elif callback.data == 'back1':
         await callback.message.edit_text(text=base.run1, reply_markup=client_kb.ikc)
@@ -73,6 +84,11 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_text(text=base.run2_2_1, reply_markup=client_kb.ikserver1)
     elif callback.data == 'back_sms':
         await callback.message.edit_text(text=base.run_sms, reply_markup=client_kb.iksms)
+    elif callback.data == 'back_zad1':
+        await callback.message.answer(text=base.run_zadarma, reply_markup=client_kb.ikzad)
+        await callback.message.delete()
+    elif callback.data == 'back_zad2':
+        await callback.message.edit_media(img_zad1, reply_markup=client_kb.ikzad1)
 
 
 def register_handlers_client(dp : Dispatcher):
