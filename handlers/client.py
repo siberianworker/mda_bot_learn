@@ -53,10 +53,10 @@ async def first_call(callback: types.CallbackQuery):
 
     #Задарма
     elif callback.data == 'run_zad':
-        await callback.message.answer(text='В процессе')
+        await callback.message.edit_text(base.run_zadarma, reply_markup=client_kb.ikzad)
     #Плюсофон
     elif callback.data == 'run_plus':
-        await callback.message.answer(text='В процессе')
+        await callback.message.edit_text(base.run_plusofon, reply_markup=client_kb.ikplus)
 
 
     #Назад
@@ -71,6 +71,8 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_text(text=base.run2_1, reply_markup=client_kb.ikpc)
     elif callback.data == 'back_server':
         await callback.message.edit_text(text=base.run2_2_1, reply_markup=client_kb.ikserver1)
+    elif callback.data == 'back_sms':
+        await callback.message.edit_text(text=base.run_sms, reply_markup=client_kb.iksms)
 
 
 def register_handlers_client(dp : Dispatcher):

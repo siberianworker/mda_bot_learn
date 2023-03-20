@@ -56,7 +56,13 @@ iksms.add(zadarma, plusofon).add(back_pc, home)
 
 #Задарма
 ikzad = InlineKeyboardMarkup(row_width=2)
-zad_vid1 = InlineKeyboardButton(text='Часть 1', url='https://youtu.be/DWcpuXONPho')
-zad_vid2 = InlineKeyboardButton(text='Часть 2', url='https://youtu.be/Cnn88_iVUqc')
+zad_vid1 = InlineKeyboardButton(text='Видео 1 часть', url='https://youtu.be/DWcpuXONPho')
+zad_vid2 = InlineKeyboardButton(text='Видео 2 часть', url='https://youtu.be/Cnn88_iVUqc')
+zad_url = InlineKeyboardButton(text='Регистрация', url='https://zadarma.com/ru/?ref=dcf761984bc63ea302d80c33bd61361f')
 #next_zad1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad1')
+ikzad.add(zad_vid1, zad_vid2).add(zad_url).add(home, back_sms)
 
+#Плюсофон
+ikplus = InlineKeyboardMarkup(row_width=2)
+plus_url = InlineKeyboardButton(text='Регистрация', url='https://new-portal.plusofon.ru/signup-user?promocode=qekv')
+ikplus.add(plus_url).add(home, back_sms)
