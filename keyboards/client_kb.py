@@ -68,9 +68,35 @@ back_zad1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad
 ikzad1.add(next_zad1).add(back_zad1, home)
 
 ikzad2 = InlineKeyboardMarkup(row_width=2)
-#next_serv = InlineKeyboardButton(text='Продолжить ✅', callback_data='run_serv')
+next_zad2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad2')
 back_zad2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad2')
-ikzad2.add(back_zad2, home)
+ikzad2.add(next_zad2).add(back_zad2, home)
+
+ikzad3 = InlineKeyboardMarkup(row_width=2)
+next_zad3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad3')
+back_zad3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad3')
+ikzad3.add(next_zad3).add(back_zad3, home)
+
+ikzad4 = InlineKeyboardMarkup(row_width=2)
+next_zad4 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad4')
+zad_chat = InlineKeyboardButton(text='Чат поддержки', url='https://t.me/MDA_teh')
+back_zad4 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad4')
+ikzad4.add(zad_chat).add(next_zad4).add(back_zad4, home)
+
+ikzad5 = InlineKeyboardMarkup(row_width=2)
+next_zad5 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad5')
+back_zad5 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad5')
+ikzad5.add(next_zad5).add(back_zad5, home)
+
+ikzad6 = InlineKeyboardMarkup(row_width=2)
+next_zad6 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad6')
+back_zad6 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad6')
+ikzad6.add(next_zad6).add(back_zad6, home)
+
+ikzad7 = InlineKeyboardMarkup(row_width=2)
+#next_zad7 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad7')
+back_zad7 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad7')
+ikzad7.add(back_zad7, home)
 
 #Плюсофон
 ikplus = InlineKeyboardMarkup(row_width=2)
