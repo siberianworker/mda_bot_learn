@@ -6,6 +6,7 @@ back1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back1')
 back_sms = InlineKeyboardButton(text='Назад 🔙', callback_data='back_sms')
 exit_serv_pc = InlineKeyboardButton(text='Продолжить ✅', callback_data='exit')
 back_pc = InlineKeyboardButton(text='Назад 🔙', callback_data='back_pc')
+exit_sms = InlineKeyboardButton(text='Продолжить ✅', callback_data='exit_sms')
 
 url_rdp_win = 'https://apps.microsoft.com/store/detail/%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-\
               %D1%81%D1%82%D0%BE%D0%BB-%D0%BC%D0%B0%D0%B9%D0%BA%D1%80%D0%BE%D1%81%D0%BE%D1%84%D1%82/9WZDNCRFJ3PS?hl=ru-ru&gl=ru&activetab=pivot%3Aoverviewtab'
@@ -51,8 +52,9 @@ ikserver1.add(serv1_1, serv1_2).add(exit_serv_pc).add(home, back2)
 iksms = InlineKeyboardMarkup(row_width=2)
 zadarma = InlineKeyboardButton(text='Zadarma', callback_data='run_zad')
 plusofon = InlineKeyboardButton(text='Плюсофон', callback_data='run_plus')
+skip_sms = InlineKeyboardButton(text='Пропустить', callback_data='skip_sms')
 #back_server = InlineKeyboardButton(text='Назад 🔙', callback_data='back_server')
-iksms.add(zadarma, plusofon).add(back_pc, home)
+iksms.add(zadarma, plusofon).add(skip_sms).add(back_pc, home)
 
 
 #Задарма
@@ -95,9 +97,8 @@ back_zad6 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad
 ikzad6.add(next_zad6).add(back_zad6, home)
 
 ikzad7 = InlineKeyboardMarkup(row_width=2)
-#next_zad7 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zad7')
 back_zad7 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad7')
-ikzad7.add(back_zad7, home)
+ikzad7.add(exit_sms).add(back_zad7, home)
 
 
 #Плюсофон
@@ -177,6 +178,11 @@ back_plus14 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_p
 ikplus14.add(next_plus14).add(home, back_plus14)
 
 ikplus15 = InlineKeyboardMarkup(row_width=2)
-#next_plus15 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus15')
 back_plus15 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus15')
-ikplus15.add(home, back_plus15)
+ikplus15.add(exit_sms).add(home, back_plus15)
+
+
+#Банки
+ikbank = InlineKeyboardMarkup(row_width=2)
+back_in_sms = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_sms')
+ikbank.add(home, back_in_sms)

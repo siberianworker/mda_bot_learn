@@ -145,8 +145,18 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'next_plus14':
         await callback.message.edit_media(img_plus15, reply_markup=client_kb.ikplus15)
 
+    #Закрываются ветки смс
+    elif callback.data == 'exit_sms':
+        await callback.message.answer(base.run_bank, reply_markup=client_kb.ikbank)
+        await callback.message.delete()
 
-    #Назад
+
+#####################################Пропустить############################
+    elif callback.data == 'skip_sms':
+        await callback.message.edit_text(base.run_bank, reply_markup=client_kb.ikbank)
+
+
+#####################################Назад#################################
     elif callback.data == 'back':
         await callback.message.answer_photo(shablon, base.run, reply_markup=client_kb.ikb)
         await callback.message.delete()
@@ -160,6 +170,7 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_text(text=base.run2_2_1, reply_markup=client_kb.ikserver1)
     elif callback.data == 'back_sms':
         await callback.message.edit_text(text=base.run_sms, reply_markup=client_kb.iksms)
+
     #Задарма
     elif callback.data == 'back_zad1':
         await callback.message.answer(text=base.run_zadarma, reply_markup=client_kb.ikzad)
@@ -176,6 +187,7 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_media(img_zad5, reply_markup=client_kb.ikzad5)
     elif callback.data == 'back_zad7':
         await callback.message.edit_media(img_zad6, reply_markup=client_kb.ikzad6)
+
     #Плюсофон
     elif callback.data == 'back_plus1':
         await callback.message.answer(text=base.run_plusofon, reply_markup=client_kb.ikplus)
@@ -208,6 +220,10 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_media(img_plus13, reply_markup=client_kb.ikplus13)
     elif callback.data == 'back_plus15':
         await callback.message.edit_media(img_plus14, reply_markup=client_kb.ikplus14)
+
+    #Назад к смс
+    elif callback.data == 'back_in_sms':
+        await callback.message.edit_text(base.run_sms, reply_markup=client_kb.iksms)
 
 
 def register_handlers_client(dp : Dispatcher):
