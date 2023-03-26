@@ -4,13 +4,6 @@ from create_bot import dp, bot
 from keyboards import client_kb
 from information import base
 
-#Тестовые
-#one = 'AgACAgIAAxkBAAMhZBCgyEqr6sgPYWAaQcnII0O2mNMAAtHGMRtdjolIAqZh6sTIcecBAAMCAAN5AAMvBA'
-#two = 'AgACAgIAAxkBAAMrZBFpUnVjXGCwT_fCWqIfKuvMLZcAAnXDMRtdjpFIP2DSB_mtWt8BAAMCAAN5AAMvBA'
-#three = 'AgACAgIAAxkBAAMtZBFpZXyc0W-UhG8p4hdyGsTYQa4AAnfDMRtdjpFIYjwY9EpRxrwBAAMCAAN5AAMvBA'
-#file1 = InputMediaPhoto(one, caption=base.run)
-#file2 = InputMediaPhoto(two, caption=base.run1)
-#file3 = InputMediaPhoto(three, caption=base.run2)
 
 #Скачать шаблон
 #a1 = 'AgACAgIAAxkBAAOJZBG8JlY8Lf_mzdIvJed1A18yj8UAAkDFMRtdjpFI-cEbWykYWaEBAAMCAAN4AAMvBA'
@@ -35,6 +28,38 @@ img_zad6 = InputMediaPhoto(zadarma_6)
 zadarma_7 = 'AgACAgIAAxkBAAICBGQZVLuuzljfjuj8cC65-I5k3oJ3AAI1yDEb_wjISAweAZQ57X0jAQADAgADeQADLwQ'
 img_zad7 = InputMediaPhoto(zadarma_7, base.zad7)
 
+#Плюсофон
+plusofon1 = 'AgACAgIAAxkBAAICCWQf43KvPP8FqAe4o8nTL58O6gerAAI4yDEbUhcBSTfqSRhX4fcwAQADAgADeQADLwQ'
+img_plus1 = InputMediaPhoto(plusofon1)
+plusofon2 = 'AgACAgIAAxkBAAICDmQf9YivnE0LH--gb9YPrxKVJxhvAAJ-yDEbUhcBSSuaz0I5bdxjAQADAgADeQADLwQ'
+img_plus2 = InputMediaPhoto(plusofon2)
+plusofon3 = 'AgACAgIAAxkBAAICEmQf93Ls2igZKcNOZrOu8N-8AT1vAAKHyDEbUhcBSdMvyiqn6-j_AQADAgADeQADLwQ'
+img_plus3 = InputMediaPhoto(plusofon3)
+plusofon4 = 'AgACAgIAAxkBAAICFGQf-wpn7Qjwr3Ohvoa81cHpsvnLAAKUyDEbUhcBSd8pXnF4AAE3nQEAAwIAA3kAAy8E'
+img_plus4 = InputMediaPhoto(plusofon4, base.plus4)
+plusofon5 = 'AgACAgIAAxkBAAICFmQf_aMtS3-xryLp9zdRV_187-Y-AAKgyDEbUhcBSRHAHV99NpjUAQADAgADeQADLwQ'
+img_plus5 = InputMediaPhoto(plusofon5, base.plus5)
+plusofon6 = 'AgACAgIAAxkBAAICGGQgAkzgFPqpVu0fzfU32tHyDr4oAAKyyDEbUhcBSW_VneM6NY0nAQADAgADeQADLwQ'
+img_plus6 = InputMediaPhoto(plusofon6, base.plus6)
+plusofon7 = 'AgACAgIAAxkBAAICGmQgGPZzUyIaJ8f5R28KqU95qUcuAAIFyTEbUhcBSXK3p3rXZHk0AQADAgADeQADLwQ'
+img_plus7 = InputMediaPhoto(plusofon7)
+plusofon8 = 'AgACAgIAAxkBAAICHGQgIHDDY-CrRlLFU3imdYCcR-bgAAIlyTEbUhcBSQz-xG555HdSAQADAgADeQADLwQ'
+img_plus8 = InputMediaPhoto(plusofon8, base.plus8)
+plusofon9 = 'AgACAgIAAxkBAAICHmQgJ1geELYT7w49GvcYy4SkJIl0AAJCyTEbUhcBSRh4iwgWNj7CAQADAgADeQADLwQ'
+img_plus9 = InputMediaPhoto(plusofon9, base.plus9)
+plusofon10 = 'AgACAgIAAxkBAAICIGQgSEqOkUBM0A5zbVT2rDpN_AjMAAKyyTEbUhcBSTc1Xi5w9Q2MAQADAgADeQADLwQ'
+img_plus10 = InputMediaPhoto(plusofon10)
+plusofon11 = 'AgACAgIAAxkBAAICImQgSpW15G63woU_hiUtxR2F8804AALryDEbUhcJSTU08yXfyJYdAQADAgADeQADLwQ'
+img_plus11 = InputMediaPhoto(plusofon11, base.plus11)
+plusofon12 = 'AgACAgIAAxkBAAICJGQgTgABZwOHK2G5tkIvxXhLK-XLMwAC-sgxG1IXCUk_yeuUfPXo_QEAAwIAA3kAAy8E'
+img_plus12 = InputMediaPhoto(plusofon12, base.plus12)
+plusofon13 = 'AgACAgIAAxkBAAICJmQgT6EB6dbk7gbitLSS7_mT8BXmAAIDyTEbUhcJSVpHGk_q-0YXAQADAgADeQADLwQ'
+img_plus13 = InputMediaPhoto(plusofon13)
+plusofon14 = 'AgACAgIAAxkBAAICKGQgUWOjOOSrcPGoy3x5iQvZb_JrAAIMyTEbUhcJSceNiIT6SXQ0AQADAgADeQADLwQ'
+img_plus14 = InputMediaPhoto(plusofon14, base.plus14)
+plusofon15 = 'AgACAgIAAxkBAAICKmQgU2LR-THqy6DMBN4AAUdV7leWtwACFckxG1IXCUnhFwfQL3TKnwEAAwIAA3kAAy8E'
+img_plus15 = InputMediaPhoto(plusofon15, base.plus15)
+
 
 #Команда /start
 async def command_start(message : types.Message):
@@ -46,13 +71,11 @@ async def first_call(callback: types.CallbackQuery):
     #Возврат в начало
     if callback.data == 'start':
         await callback.message.delete()
-
         await callback.message.answer(text=base.welcome, reply_markup=client_kb.ika)
     elif callback.data == 'run':
         await callback.message.answer_photo(shablon, base.run, reply_markup=client_kb.ikb)
         await callback.message.delete()
     elif callback.data == 'run1':
-#        await callback.message.edit_media(file2, reply_markup=client_kb.ikc)
         await callback.message.answer(text=base.run1, reply_markup=client_kb.ikc)
         await callback.message.delete()
     elif callback.data == 'pc':
@@ -90,6 +113,37 @@ async def first_call(callback: types.CallbackQuery):
     #Плюсофон
     elif callback.data == 'run_plus':
         await callback.message.edit_text(base.run_plusofon, reply_markup=client_kb.ikplus)
+    elif callback.data == 'next_plus':
+        await callback.message.answer_photo(plusofon1, reply_markup=client_kb.ikplus1)
+        await callback.message.delete()
+    elif callback.data == 'next_plus1':
+        await callback.message.edit_media(img_plus2, reply_markup=client_kb.ikplus2)
+    elif callback.data == 'next_plus2':
+        await callback.message.edit_media(img_plus3, reply_markup=client_kb.ikplus3)
+    elif callback.data == 'next_plus3':
+        await callback.message.edit_media(img_plus4, reply_markup=client_kb.ikplus4)
+    elif callback.data == 'next_plus4':
+        await callback.message.edit_media(img_plus5, reply_markup=client_kb.ikplus5)
+    elif callback.data == 'next_plus5':
+        await callback.message.edit_media(img_plus6, reply_markup=client_kb.ikplus6)
+    elif callback.data == 'next_plus6':
+        await callback.message.edit_media(img_plus7, reply_markup=client_kb.ikplus7)
+    elif callback.data == 'next_plus7':
+        await callback.message.edit_media(img_plus8, reply_markup=client_kb.ikplus8)
+    elif callback.data == 'next_plus8':
+        await callback.message.edit_media(img_plus9, reply_markup=client_kb.ikplus9)
+    elif callback.data == 'next_plus9':
+        await callback.message.edit_media(img_plus10, reply_markup=client_kb.ikplus10)
+    elif callback.data == 'next_plus10':
+        await callback.message.edit_media(img_plus11, reply_markup=client_kb.ikplus11)
+    elif callback.data == 'next_plus11':
+        await callback.message.edit_media(img_plus12, reply_markup=client_kb.ikplus12)
+    elif callback.data == 'next_plus12':
+        await callback.message.edit_media(img_plus13, reply_markup=client_kb.ikplus13)
+    elif callback.data == 'next_plus13':
+        await callback.message.edit_media(img_plus14, reply_markup=client_kb.ikplus14)
+    elif callback.data == 'next_plus14':
+        await callback.message.edit_media(img_plus15, reply_markup=client_kb.ikplus15)
 
 
     #Назад
@@ -122,6 +176,38 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_media(img_zad5, reply_markup=client_kb.ikzad5)
     elif callback.data == 'back_zad7':
         await callback.message.edit_media(img_zad6, reply_markup=client_kb.ikzad6)
+    #Плюсофон
+    elif callback.data == 'back_plus1':
+        await callback.message.answer(text=base.run_plusofon, reply_markup=client_kb.ikplus)
+        await callback.message.delete()
+    elif callback.data == 'back_plus2':
+        await callback.message.edit_media(img_plus1, reply_markup=client_kb.ikplus1)
+    elif callback.data == 'back_plus3':
+        await callback.message.edit_media(img_plus2, reply_markup=client_kb.ikplus2)
+    elif callback.data == 'back_plus4':
+        await callback.message.edit_media(img_plus3, reply_markup=client_kb.ikplus3)
+    elif callback.data == 'back_plus5':
+        await callback.message.edit_media(img_plus4, reply_markup=client_kb.ikplus4)
+    elif callback.data == 'back_plus6':
+        await callback.message.edit_media(img_plus5, reply_markup=client_kb.ikplus5)
+    elif callback.data == 'back_plus7':
+        await callback.message.edit_media(img_plus6, reply_markup=client_kb.ikplus6)
+    elif callback.data == 'back_plus8':
+        await callback.message.edit_media(img_plus7, reply_markup=client_kb.ikplus7)
+    elif callback.data == 'back_plus9':
+        await callback.message.edit_media(img_plus8, reply_markup=client_kb.ikplus8)
+    elif callback.data == 'back_plus10':
+        await callback.message.edit_media(img_plus9, reply_markup=client_kb.ikplus9)
+    elif callback.data == 'back_plus11':
+        await callback.message.edit_media(img_plus10, reply_markup=client_kb.ikplus10)
+    elif callback.data == 'back_plus12':
+        await callback.message.edit_media(img_plus11, reply_markup=client_kb.ikplus11)
+    elif callback.data == 'back_plus13':
+        await callback.message.edit_media(img_plus12, reply_markup=client_kb.ikplus12)
+    elif callback.data == 'back_plus14':
+        await callback.message.edit_media(img_plus13, reply_markup=client_kb.ikplus13)
+    elif callback.data == 'back_plus15':
+        await callback.message.edit_media(img_plus14, reply_markup=client_kb.ikplus14)
 
 
 def register_handlers_client(dp : Dispatcher):

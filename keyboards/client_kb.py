@@ -54,6 +54,7 @@ plusofon = InlineKeyboardButton(text='Плюсофон', callback_data='run_plus
 #back_server = InlineKeyboardButton(text='Назад 🔙', callback_data='back_server')
 iksms.add(zadarma, plusofon).add(back_pc, home)
 
+
 #Задарма
 ikzad = InlineKeyboardMarkup(row_width=2)
 zad_vid1 = InlineKeyboardButton(text='Видео 1 часть', url='https://youtu.be/DWcpuXONPho')
@@ -98,7 +99,84 @@ ikzad7 = InlineKeyboardMarkup(row_width=2)
 back_zad7 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zad7')
 ikzad7.add(back_zad7, home)
 
+
 #Плюсофон
 ikplus = InlineKeyboardMarkup(row_width=2)
 plus_url = InlineKeyboardButton(text='Регистрация', url='https://new-portal.plusofon.ru/signup-user?promocode=qekv')
-ikplus.add(plus_url).add(home, back_sms)
+next_plus = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus')
+ikplus.add(plus_url).add(next_plus).add(home, back_sms)
+
+ikplus1 = InlineKeyboardMarkup(row_width=2)
+next_plus1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus1')
+back_plus1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus1')
+ikplus1.add(next_plus1).add(home, back_plus1)
+
+ikplus2 = InlineKeyboardMarkup(row_width=2)
+next_plus2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus2')
+back_plus2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus2')
+ikplus2.add(next_plus2).add(home, back_plus2)
+
+ikplus3 = InlineKeyboardMarkup(row_width=2)
+next_plus3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus3')
+back_plus3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus3')
+ikplus3.add(next_plus3).add(home, back_plus3)
+
+ikplus4 = InlineKeyboardMarkup(row_width=2)
+next_plus4 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus4')
+back_plus4 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus4')
+ikplus4.add(next_plus4).add(home, back_plus4)
+
+ikplus5 = InlineKeyboardMarkup(row_width=2)
+next_plus5 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus5')
+back_plus5 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus5')
+ikplus5.add(next_plus5).add(home, back_plus5)
+
+ikplus6 = InlineKeyboardMarkup(row_width=2)
+next_plus6 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus6')
+back_plus6 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus6')
+ikplus6.add(next_plus6).add(home, back_plus6)
+
+ikplus7 = InlineKeyboardMarkup(row_width=2)
+next_plus7 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus7')
+back_plus7 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus7')
+ikplus7.add(next_plus7).add(home, back_plus7)
+
+ikplus8 = InlineKeyboardMarkup(row_width=2)
+next_plus8 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus8')
+back_plus8 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus8')
+ikplus8.add(next_plus8).add(home, back_plus8)
+
+ikplus9 = InlineKeyboardMarkup(row_width=2)
+next_plus9 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus9')
+back_plus9 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus9')
+ikplus9.add(next_plus9).add(home, back_plus9)
+
+ikplus10 = InlineKeyboardMarkup(row_width=2)
+next_plus10 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus10')
+back_plus10 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus10')
+ikplus10.add(next_plus10).add(home, back_plus10)
+
+ikplus11 = InlineKeyboardMarkup(row_width=2)
+next_plus11 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus11')
+back_plus11 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus11')
+ikplus11.add(next_plus11).add(home, back_plus11)
+
+ikplus12 = InlineKeyboardMarkup(row_width=2)
+next_plus12 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus12')
+back_plus12 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus12')
+ikplus12.add(next_plus12).add(home, back_plus12)
+
+ikplus13 = InlineKeyboardMarkup(row_width=2)
+next_plus13 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus13')
+back_plus13 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus13')
+ikplus13.add(next_plus13).add(home, back_plus13)
+
+ikplus14 = InlineKeyboardMarkup(row_width=2)
+next_plus14 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus14')
+back_plus14 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus14')
+ikplus14.add(next_plus14).add(home, back_plus14)
+
+ikplus15 = InlineKeyboardMarkup(row_width=2)
+#next_plus15 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_plus15')
+back_plus15 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_plus15')
+ikplus15.add(home, back_plus15)
