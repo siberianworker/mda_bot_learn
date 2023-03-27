@@ -150,6 +150,14 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.answer(base.run_bank, reply_markup=client_kb.ikbank)
         await callback.message.delete()
 
+    #Киви
+    elif callback.data == 'run_qiwi':
+        await callback.message.edit_text(base.run_qiwi, reply_markup=client_kb.ikqiwi)
+
+    #Модульбанк
+    elif callback.data == 'run_modulbank':
+        await callback.message.edit_text(base.run_modul, reply_markup=client_kb.ikmodul)
+
 
 #####################################Пропустить############################
     elif callback.data == 'skip_sms':
@@ -224,6 +232,10 @@ async def first_call(callback: types.CallbackQuery):
     #Назад к смс
     elif callback.data == 'back_in_sms':
         await callback.message.edit_text(base.run_sms, reply_markup=client_kb.iksms)
+
+    #Назад к банку
+    elif callback.data == 'back_bank':
+        await callback.message.edit_text(base.run_bank, reply_markup=client_kb.ikbank)
 
 
 def register_handlers_client(dp : Dispatcher):
