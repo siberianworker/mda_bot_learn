@@ -9,11 +9,13 @@ exit_serv_pc = InlineKeyboardButton(text='Продолжить ✅', callback_da
 back_pc = InlineKeyboardButton(text='Назад 🔙', callback_data='back_pc')
 exit_sms = InlineKeyboardButton(text='Продолжить ✅', callback_data='exit_sms')
 back_bank = InlineKeyboardButton(text='Назад 🔙', callback_data='back_bank')
+back_reg = InlineKeyboardButton(text='Назад 🔙', callback_data='back_reg')
 
 #Ссылки
 url_rdp_win = 'https://apps.microsoft.com/store/detail/%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-\
               %D1%81%D1%82%D0%BE%D0%BB-%D0%BC%D0%B0%D0%B9%D0%BA%D1%80%D0%BE%D1%81%D0%BE%D1%84%D1%82/9WZDNCRFJ3PS?hl=ru-ru&gl=ru&activetab=pivot%3Aoverviewtab'
 url_rdp_mac = 'https://apps.apple.com/ru/app/microsoft-remote-desktop/id1295203466?mt=12'
+url_modulbank = 'https://modulbank.ru/marketplace/?utm_source=agentnet&utm_medium=partner&utm_campaign=RKO_ag-212102486441'
 
 #Начало
 ika = InlineKeyboardMarkup(row_width=2)
@@ -190,16 +192,124 @@ ikbank = InlineKeyboardMarkup(row_width=2)
 back_in_sms = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_sms')
 qiwi = InlineKeyboardButton(text='QIWI-кошелек', callback_data='run_qiwi')
 modulbank = InlineKeyboardButton(text='Модульбанк', callback_data='run_modulbank')
-ikbank.add(qiwi, modulbank).add(back_in_sms, home)
+skip_bank = InlineKeyboardButton(text='Пропустить', callback_data='skip_bank')
+ikbank.add(qiwi, modulbank).add(skip_bank).add(back_in_sms, home)
 
 
 #QIWI
 ikqiwi = InlineKeyboardMarkup(row_width=2)
+next_qiwi = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi')
 qiwi_url = InlineKeyboardButton(text='Регистрация', url='https://qiwi.com/')
 qiwi_video = InlineKeyboardButton(text='Видеоинструкция', url='https://youtu.be/dqrYg1vilxE')
-ikqiwi.add(qiwi_url, qiwi_video).add(back_bank, home)
+ikqiwi.add(qiwi_url, qiwi_video).add(next_qiwi).add(back_bank, home)
+
+ikqiwi1 = InlineKeyboardMarkup(row_width=2)
+next_qiwi1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi1')
+qiwi_url1 = InlineKeyboardButton(text='Zadarma', url='https://zadarma.com/ru/')
+back_qiwi1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi1')
+ikqiwi1.add(qiwi_url1).add(next_qiwi1).add(back_qiwi1, home)
+
+ikqiwi2 = InlineKeyboardMarkup(row_width=2)
+next_qiwi2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi2')
+qiwi_url2 = InlineKeyboardButton(text='Основной', url='https://qiwi.com/support/information/subject5/identifikatsiya-v-qiwi-koshelke')
+qiwi_url2_1 = InlineKeyboardButton(text='Профессиональный', url='https://qiwi.com/settings/identification/full-ru#ru')
+back_qiwi2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi2')
+ikqiwi2.add(qiwi_url2, qiwi_url2_1).add(next_qiwi2).add(back_qiwi2, home)
+
+ikqiwi3 = InlineKeyboardMarkup(row_width=2)
+next_qiwi3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi3')
+back_qiwi3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi3')
+ikqiwi3.add(next_qiwi3).add(back_qiwi3, home)
+
+ikqiwi4 = InlineKeyboardMarkup(row_width=2)
+next_qiwi4 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi4')
+back_qiwi4 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi4')
+ikqiwi4.add(next_qiwi4).add(back_qiwi4, home)
+
+ikqiwi5 = InlineKeyboardMarkup(row_width=2)
+next_qiwi5 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi5')
+back_qiwi5 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi5')
+ikqiwi5.add(next_qiwi5).add(back_qiwi5, home)
+
+ikqiwi6 = InlineKeyboardMarkup(row_width=2)
+next_qiwi6 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi6')
+back_qiwi6 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi6')
+ikqiwi6.add(next_qiwi6).add(back_qiwi6, home)
+
+ikqiwi7 = InlineKeyboardMarkup(row_width=2)
+next_qiwi7 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_qiwi7')
+back_qiwi7 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_qiwi7')
+ikqiwi7.add(next_qiwi7).add(back_qiwi7, home)
 
 
 #Модульбанк
 ikmodul = InlineKeyboardMarkup(row_width=2)
-ikmodul.add(back_bank, home)
+next_modul = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_modul')
+modul_url = InlineKeyboardButton(text='Оставить заявку', url=url_modulbank)
+back_modul = InlineKeyboardButton(text='Назад 🔙', callback_data='back_modul')
+ikmodul.add(modul_url).add(next_modul).add(back_modul, home)
+
+ikmodul1 = InlineKeyboardMarkup(row_width=2)
+modul_url1 = InlineKeyboardButton(text='Zadarma', url='https://my.zadarma.com/')
+next_modul1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_modul1')
+back_modul1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_modul1')
+ikmodul1.add(modul_url1).add(next_modul1).add(back_modul1, home)
+
+
+############################Регистрации аккаунтов############################
+ikreg = InlineKeyboardMarkup(row_width=2)
+onlinesim = InlineKeyboardButton(text='OnlineSIM', callback_data='onlinesim')
+activate = InlineKeyboardButton(text='SMS-activate', callback_data='activate')
+back_in_bank = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_bank')
+ikreg.add(onlinesim, activate).add(back_in_bank, home)
+
+
+#OnlineSIM
+ikosim = InlineKeyboardMarkup(row_width=2)
+next_osim = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_osim')
+osim_url = InlineKeyboardButton(text='Регистрация', url='https://onlinesim.io/?ref=3245082')
+osim_video = InlineKeyboardButton(text='Видеоинструкция', url='https://youtu.be/WmaBcA1oTkE')
+ikosim.add(osim_url, osim_video).add(next_osim).add(back_reg, home)
+
+ikosim1 = InlineKeyboardMarkup(row_width=2)
+next_osi1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_osim1')
+back_osim1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_osim1')
+ikosim1.add(next_osi1).add(back_osim1, home)
+
+ikosim2 = InlineKeyboardMarkup(row_width=2)
+next_osi2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_osim2')
+back_osim2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_osim2')
+ikosim2.add(next_osi2).add(back_osim2, home)
+
+ikosim3 = InlineKeyboardMarkup(row_width=2)
+next_osi3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_osim3')
+back_osim3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_osim3')
+ikosim3.add(next_osi3).add(back_osim3, home)
+
+ikosim4 = InlineKeyboardMarkup(row_width=2)
+#next_osi4 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_osim4')
+back_osim4 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_osim4')
+ikosim4.add(back_osim4, home)
+
+
+#SMS-activate
+ikactiv = InlineKeyboardMarkup(row_width=2)
+next_activ = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_activ')
+activ_url = InlineKeyboardButton(text='Регистрация', url='https://sms-activate.org/?ref=1965570')
+activ_video =InlineKeyboardButton(text='Видеоинструкция', url='https://youtu.be/IClOpurIEAw')
+ikactiv.add(activ_url, activ_video).add(next_activ).add(back_reg, home)
+
+ikactiv1 = InlineKeyboardMarkup(row_width=2)
+next_activ1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_activ1')
+back_activ1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_activ1')
+ikactiv1.add(next_activ1).add(back_activ1, home)
+
+ikactiv2 = InlineKeyboardMarkup(row_width=2)
+next_activ2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_activ2')
+back_activ2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_activ2')
+ikactiv2.add(next_activ2).add(back_activ2, home)
+
+ikactiv3 = InlineKeyboardMarkup(row_width=2)
+#next_activ3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_activ3')
+back_activ3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_activ3')
+ikactiv3.add(back_activ3, home)
