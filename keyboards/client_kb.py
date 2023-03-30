@@ -260,8 +260,9 @@ ikmodul1.add(modul_url1).add(next_modul1).add(back_modul1, home)
 ikreg = InlineKeyboardMarkup(row_width=2)
 onlinesim = InlineKeyboardButton(text='OnlineSIM', callback_data='onlinesim')
 activate = InlineKeyboardButton(text='SMS-activate', callback_data='activate')
+vak_sms = InlineKeyboardButton(text='Vak-sms', callback_data='vak_sms')
 back_in_bank = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_bank')
-ikreg.add(onlinesim, activate).add(back_in_bank, home)
+ikreg.add(onlinesim, activate, vak_sms).add(back_in_bank, home)
 
 
 #OnlineSIM
@@ -313,3 +314,26 @@ ikactiv3 = InlineKeyboardMarkup(row_width=2)
 #next_activ3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_activ3')
 back_activ3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_activ3')
 ikactiv3.add(back_activ3, home)
+
+
+#Vak-sms
+ikvak = InlineKeyboardMarkup(row_width=2)
+next_vak = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_vak')
+vak_url = InlineKeyboardButton(text='Регистрация', url='https://vak-sms.com/311621a1-6e74-4c16-bdd3-1f154349f311')
+vak_video = InlineKeyboardButton(text='Видеоинструкция', url='https://youtu.be/ZuyU8zM6BF0')
+ikvak.add(vak_url, vak_video).add(next_vak).add(back_reg, home)
+
+ikvak1 = InlineKeyboardMarkup(row_width=2)
+next_vak1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_vak1')
+back_vak1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_vak1')
+ikvak1.add(next_vak1).add(back_vak1, home)
+
+ikvak2 = InlineKeyboardMarkup(row_width=2)
+next_vak2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_vak2')
+back_vak2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_vak2')
+ikvak2.add(next_vak2).add(back_vak2, home)
+
+ikvak3 = InlineKeyboardMarkup(row_width=2)
+#next_vak3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_vak3')
+back_vak3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_vak3')
+ikvak3.add(back_vak3, home)

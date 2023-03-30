@@ -98,6 +98,14 @@ img_activ2 = InputMediaPhoto(activ2, base.activ2)
 activ3 = 'AgACAgIAAxkBAAICjWQj-cUGl3YDgo-FwGgqQLI4WUAkAALbyDEbBDkgSTsZ4ZJiiKc6AQADAgADeAADLwQ'
 img_activ3 = InputMediaPhoto(activ3, base.activ3)
 
+#Vak-sms
+vak1 = 'AgACAgIAAxkBAAICkGQkID3gxLxykBZ1Y-4_GVRkMNLSAAJ1yTEbBDkgSdE2dYogokN5AQADAgADeQADLwQ'
+img_vak1 = InputMediaPhoto(vak1, base.vak1)
+vak2 = 'AgACAgIAAxkBAAIClWQkJAzLVfzFY3gn04HVYHdwrOElAAJ7yTEbBDkgSWLJooKKGR-gAQADAgADeAADLwQ'
+img_vak2 = InputMediaPhoto(vak2, base.vak2)
+vak3 = 'AgACAgIAAxkBAAICmWQkJsoSvweoVoWgftI_EJqghCWUAALAyTEbBDkgScMLuLOGnkBnAQADAgADeAADLwQ'
+img_vak3 = InputMediaPhoto(vak3, base.vak3)
+
 
 #Команда /start
 async def command_start(message : types.Message):
@@ -244,6 +252,17 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'next_activ2':
         await callback.message.edit_media(img_activ3, reply_markup=client_kb.ikactiv3)
 
+    #Vak-sms
+    elif callback.data == 'vak_sms':
+        await callback.message.edit_text(base.run_vak, reply_markup=client_kb.ikvak)
+    elif callback.data == 'next_vak':
+        await callback.message.answer_photo(vak1, base.vak1, reply_markup=client_kb.ikvak1)
+        await callback.message.delete()
+    elif callback.data == 'next_vak1':
+        await callback.message.edit_media(img_vak2, reply_markup=client_kb.ikvak2)
+    elif callback.data == 'next_vak2':
+        await callback.message.edit_media(img_vak3, reply_markup=client_kb.ikvak3)
+
 
 #####################################Пропустить############################
     #Смс
@@ -378,6 +397,15 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_media(img_activ1, reply_markup=client_kb.ikactiv1)
     elif callback.data == 'back_activ3':
         await callback.message.edit_media(img_activ2, reply_markup=client_kb.ikactiv2)
+
+    #Vak-sms
+    elif callback.data == 'back_vak1':
+        await callback.message.answer(base.run_vak, reply_markup=client_kb.ikvak)
+        await callback.message.delete()
+    elif callback.data == 'back_vak2':
+        await callback.message.edit_media(img_vak1, reply_markup=client_kb.ikvak1)
+    elif callback.data == 'back_vak3':
+        await callback.message.edit_media(img_vak2, reply_markup=client_kb.ikvak2)
 
 
 def register_handlers_client(dp : Dispatcher):
