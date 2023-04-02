@@ -106,6 +106,9 @@ img_vak2 = InputMediaPhoto(vak2, base.vak2)
 vak3 = 'AgACAgIAAxkBAAICmWQkJsoSvweoVoWgftI_EJqghCWUAALAyTEbBDkgScMLuLOGnkBnAQADAgADeAADLwQ'
 img_vak3 = InputMediaPhoto(vak3, base.vak3)
 
+#Proxy
+proxy2 = 'AgACAgIAAxkBAAICoGQpTvRoRV2J1zYAAe40yxfnlcHe-AACrsgxG58jSUlh2ZdYE4lsLwEAAwIAA3gAAy8E'
+
 
 #Команда /start
 async def command_start(message : types.Message):
@@ -133,7 +136,8 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'run_serv':
         await callback.message.edit_text(base.run2_2_1, reply_markup=client_kb.ikserver1)
 
-    #Закрываются ветки сервер и пк
+
+    #Закрываются ветки сервер и пк##################################################
     elif callback.data == 'exit':
         await callback.message.edit_text(base.run_sms, reply_markup=client_kb.iksms)
 
@@ -191,7 +195,8 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'next_plus14':
         await callback.message.edit_media(img_plus15, reply_markup=client_kb.ikplus15)
 
-    #Закрываются ветки смс
+
+    #Закрываются ветки смс#########################################################
     elif callback.data == 'exit_sms':
         await callback.message.answer(base.run_bank, reply_markup=client_kb.ikbank)
         await callback.message.delete()
@@ -264,6 +269,18 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_media(img_vak3, reply_markup=client_kb.ikvak3)
 
 
+    #Закрываются ветки регистрации акков#############################################
+    elif callback.data == 'exit_reg':
+        await callback.message.answer(base.run_proxy, reply_markup=client_kb.ikproxy)
+        await callback.message.delete()
+
+    #Proxy
+    elif callback.data == 'next_proxy':
+        await callback.message.edit_text(base.proxy1, reply_markup=client_kb.ikproxy1)
+    elif callback.data == 'next_proxy1':
+        await callback.message.answer_photo(proxy2, base.proxy2, reply_markup=client_kb.ikproxy2)
+
+
 #####################################Пропустить############################
     #Смс
     elif callback.data == 'skip_sms':
@@ -271,6 +288,9 @@ async def first_call(callback: types.CallbackQuery):
     #Банк
     elif callback.data == 'skip_bank':
         await callback.message.edit_text(base.run_reg, reply_markup=client_kb.ikreg)
+    #Регистрация аккаунтов
+    elif callback.data == 'skip_reg':
+        await callback.message.edit_text(base.run_proxy, reply_markup=client_kb.ikproxy)
 
 
 #####################################Назад#################################
@@ -342,7 +362,8 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'back_in_sms':
         await callback.message.edit_text(base.run_sms, reply_markup=client_kb.iksms)
 
-    #Назад к банку (qiwi)
+
+    #Назад к банку (qiwi)########################################################
     elif callback.data == 'back_bank':
         await callback.message.edit_text(base.run_bank, reply_markup=client_kb.ikbank)
 
@@ -374,7 +395,8 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'back_in_bank':
         await callback.message.edit_text(base.run_bank, reply_markup=client_kb.ikbank)
 
-    #Назад к регистрации аккаунтов
+
+    #Назад к регистрации аккаунтов##################################################
     elif callback.data == 'back_reg':
         await callback.message.edit_text(base.run_reg, reply_markup=client_kb.ikreg)
 
@@ -406,6 +428,18 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_media(img_vak1, reply_markup=client_kb.ikvak1)
     elif callback.data == 'back_vak3':
         await callback.message.edit_media(img_vak2, reply_markup=client_kb.ikvak2)
+
+
+    #Назад к регистрации акков###################################################
+    elif callback.data == 'back_in_reg':
+        await callback.message.edit_text(base.run_reg, reply_markup=client_kb.ikreg)
+
+    #Proxy
+    elif callback.data == 'back_proxy1':
+        await callback.message.edit_text(base.run_proxy, reply_markup=client_kb.ikproxy)
+    elif callback.data == 'back_proxy2':
+        await callback.message.answer(base.proxy1, reply_markup=client_kb.ikproxy1)
+        await callback.message.delete()
 
 
 def register_handlers_client(dp : Dispatcher):

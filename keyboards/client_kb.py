@@ -10,6 +10,7 @@ back_pc = InlineKeyboardButton(text='Назад 🔙', callback_data='back_pc')
 exit_sms = InlineKeyboardButton(text='Продолжить ✅', callback_data='exit_sms')
 back_bank = InlineKeyboardButton(text='Назад 🔙', callback_data='back_bank')
 back_reg = InlineKeyboardButton(text='Назад 🔙', callback_data='back_reg')
+exit_reg = InlineKeyboardButton(text='Продолжить ✅', callback_data='exit_reg')
 
 #Ссылки
 url_rdp_win = 'https://apps.microsoft.com/store/detail/%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-\
@@ -258,11 +259,12 @@ ikmodul1.add(modul_url1).add(next_modul1).add(back_modul1, home)
 
 ############################Регистрации аккаунтов############################
 ikreg = InlineKeyboardMarkup(row_width=2)
+skip_reg = InlineKeyboardButton(text='Пропустить', callback_data='skip_reg')
 onlinesim = InlineKeyboardButton(text='OnlineSIM', callback_data='onlinesim')
 activate = InlineKeyboardButton(text='SMS-activate', callback_data='activate')
 vak_sms = InlineKeyboardButton(text='Vak-sms', callback_data='vak_sms')
 back_in_bank = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_bank')
-ikreg.add(onlinesim, activate, vak_sms).add(back_in_bank, home)
+ikreg.add(onlinesim, activate, vak_sms).add(skip_reg).add(back_in_bank, home)
 
 
 #OnlineSIM
@@ -288,9 +290,8 @@ back_osim3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_os
 ikosim3.add(next_osi3).add(back_osim3, home)
 
 ikosim4 = InlineKeyboardMarkup(row_width=2)
-#next_osi4 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_osim4')
 back_osim4 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_osim4')
-ikosim4.add(back_osim4, home)
+ikosim4.add(exit_reg).add(back_osim4, home)
 
 
 #SMS-activate
@@ -311,9 +312,8 @@ back_activ2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_a
 ikactiv2.add(next_activ2).add(back_activ2, home)
 
 ikactiv3 = InlineKeyboardMarkup(row_width=2)
-#next_activ3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_activ3')
 back_activ3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_activ3')
-ikactiv3.add(back_activ3, home)
+ikactiv3.add(exit_reg).add(back_activ3, home)
 
 
 #Vak-sms
@@ -334,6 +334,24 @@ back_vak2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_vak
 ikvak2.add(next_vak2).add(back_vak2, home)
 
 ikvak3 = InlineKeyboardMarkup(row_width=2)
-#next_vak3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_vak3')
 back_vak3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_vak3')
-ikvak3.add(back_vak3, home)
+ikvak3.add(exit_reg).add(back_vak3, home)
+
+
+############################Аренда и установка прокси############################
+ikproxy = InlineKeyboardMarkup(row_width=2)
+next_proxy =InlineKeyboardButton(text='Продолжить ✅', callback_data='next_proxy')
+proxy_url = InlineKeyboardButton(text='Наш прокси', callback_data='https://t.me/MDA_teh')
+proxy_url_1 = InlineKeyboardButton(text='Proxy Promo', callback_data='https://proxy.promo')
+back_in_reg = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_reg')
+ikproxy.add(proxy_url, proxy_url_1).add(next_proxy).add(back_in_reg, home)
+
+ikproxy1 = InlineKeyboardMarkup(row_width=2)
+next_proxy1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_proxy1')
+back_proxy1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_proxy1')
+ikproxy1.add(next_proxy1).add(back_proxy1, home)
+
+ikproxy2 = InlineKeyboardMarkup(row_width=2)
+#next_proxy2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_proxy2')
+back_proxy2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_proxy2')
+ikproxy2.add(back_proxy2, home)
