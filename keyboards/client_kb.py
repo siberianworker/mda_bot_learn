@@ -11,12 +11,14 @@ exit_sms = InlineKeyboardButton(text='Продолжить ✅', callback_data='
 back_bank = InlineKeyboardButton(text='Назад 🔙', callback_data='back_bank')
 back_reg = InlineKeyboardButton(text='Назад 🔙', callback_data='back_reg')
 exit_reg = InlineKeyboardButton(text='Продолжить ✅', callback_data='exit_reg')
+back_zenno1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zenno1')
 
 #Ссылки
 url_rdp_win = 'https://apps.microsoft.com/store/detail/%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-\
               %D1%81%D1%82%D0%BE%D0%BB-%D0%BC%D0%B0%D0%B9%D0%BA%D1%80%D0%BE%D1%81%D0%BE%D1%84%D1%82/9WZDNCRFJ3PS?hl=ru-ru&gl=ru&activetab=pivot%3Aoverviewtab'
 url_rdp_mac = 'https://apps.apple.com/ru/app/microsoft-remote-desktop/id1295203466?mt=12'
 url_modulbank = 'https://modulbank.ru/marketplace/?utm_source=agentnet&utm_medium=partner&utm_campaign=RKO_ag-212102486441'
+url_json = 'https://zennolab.atlassian.net/wiki/spaces/RU/pages/735576090/Google+PM'
 
 #Начало
 ika = InlineKeyboardMarkup(row_width=2)
@@ -60,7 +62,7 @@ zadarma = InlineKeyboardButton(text='Zadarma', callback_data='run_zad')
 plusofon = InlineKeyboardButton(text='Плюсофон', callback_data='run_plus')
 skip_sms = InlineKeyboardButton(text='Пропустить', callback_data='skip_sms')
 #back_server = InlineKeyboardButton(text='Назад 🔙', callback_data='back_server')
-iksms.add(zadarma, plusofon).add(skip_sms).add(back_pc, home)
+iksms.add(zadarma).add(skip_sms).add(back_pc, home)
 
 
 #Задарма
@@ -344,7 +346,8 @@ next_proxy =InlineKeyboardButton(text='Продолжить ✅', callback_data=
 proxy_url = InlineKeyboardButton(text='Наш прокси', callback_data='https://t.me/MDA_teh')
 proxy_url_1 = InlineKeyboardButton(text='Proxy Promo', callback_data='https://proxy.promo')
 back_in_reg = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_reg')
-ikproxy.add(proxy_url, proxy_url_1).add(next_proxy).add(back_in_reg, home)
+skip_proxy = InlineKeyboardButton(text='Пропустить', callback_data='skip_proxy')
+ikproxy.add(proxy_url, proxy_url_1).add(next_proxy).add(skip_proxy).add(back_in_reg, home)
 
 ikproxy1 = InlineKeyboardMarkup(row_width=2)
 next_proxy1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_proxy1')
@@ -352,6 +355,75 @@ back_proxy1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_p
 ikproxy1.add(next_proxy1).add(back_proxy1, home)
 
 ikproxy2 = InlineKeyboardMarkup(row_width=2)
-#next_proxy2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_proxy2')
+next_proxy2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_proxy2')
 back_proxy2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_proxy2')
-ikproxy2.add(back_proxy2, home)
+ikproxy2.add(next_proxy2).add(back_proxy2, home)
+
+
+################################ZennoLab#######################################
+ikzenno = InlineKeyboardMarkup(row_width=2)
+next_zenno = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zenno')
+skip_zenno = InlineKeyboardButton(text='Пропустить', callback_data='skip_zenno')
+zenno_url = InlineKeyboardButton(text='Регистрация', url='https://userarea.zennolab.com/lk/Registration.aspx')
+zenno_video = InlineKeyboardButton(text='Видеоинструкция', callback_data='zenno_video')
+back_zenno = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zenno')
+ikzenno.add(zenno_url, zenno_video).add(next_zenno).add(skip_zenno).add(back_zenno, home)
+
+#Видеоинструкция
+ikzenno_video = InlineKeyboardMarkup(row_width=2)
+zenno_video1 = InlineKeyboardButton(text='1 Часть', url='https://youtu.be/4zJFvLBSgpg')
+zenno_video2 = InlineKeyboardButton(text='2 Часть', url='https://youtu.be/MCZcsEvRNNg')
+zenno_video3 = InlineKeyboardButton(text='3 Часть', url='https://youtu.be/y7fSaZ-uXI8')
+ikzenno_video.add(zenno_video1, zenno_video2, zenno_video3).add(back_zenno1, home)
+
+ikzenno1 = InlineKeyboardMarkup(row_width=2)
+next_zenno1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zenno1')
+ikzenno1.add(next_zenno1).add(back_zenno1, home)
+
+ikzenno2 = InlineKeyboardMarkup(row_width=2)
+next_zenno2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zenno2')
+zenno_url2 = InlineKeyboardButton(text='Скачать', url='https://account.zennolab.com/personal-area-main/my-products')
+back_zenno2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zenno2')
+ikzenno2.add(zenno_url2).add(next_zenno2).add(back_zenno2, home)
+
+ikzenno3 = InlineKeyboardMarkup(row_width=2)
+next_zenno3 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zenno3')
+back_zenno3 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zenno3')
+ikzenno3.add(next_zenno3).add(back_zenno3, home)
+
+ikzenno4 = InlineKeyboardMarkup(row_width=2)
+next_zenno4 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_zenno4')
+zenno_url4 = InlineKeyboardButton(text='Оборудование', url='https://userarea.zennolab.com/lk/userarea/UserAddHardware.aspx')
+back_zenno4 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_zenno4')
+ikzenno4.add(zenno_url4).add(next_zenno4).add(back_zenno4, home)
+
+
+##########################Разгадывание капчи###################################
+ikcaptcha = InlineKeyboardMarkup(row_width=2)
+next_captcha = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_captcha')
+captha_url = InlineKeyboardButton(text='Регистрация', url='https://rucaptcha.com/?from=13800235')
+captcha_video = InlineKeyboardButton(text='Видеоинструкция', url='https://youtu.be/3gmJPnUCYCo')
+back_in_zenno = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_zenno')
+skip_captcha = InlineKeyboardButton(text='Пропустить', callback_data='skip_captcha')
+ikcaptcha.add(captha_url, captcha_video).add(next_captcha).add(skip_captcha).add(back_in_zenno, home)
+
+ikcaptcha1 = InlineKeyboardMarkup(row_width=2)
+next_captcha1 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_captcha1')
+back_captcha1 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_captcha1')
+ikcaptcha1.add(next_captcha1).add(back_captcha1, home)
+
+ikcaptcha2 = InlineKeyboardMarkup(row_width=2)
+next_captcha2 = InlineKeyboardButton(text='Продолжить ✅', callback_data='next_captcha2')
+back_captcha2 = InlineKeyboardButton(text='Назад 🔙', callback_data='back_captcha2')
+ikcaptcha2.add(next_captcha2).add(back_captcha2, home)
+
+
+############################Google JSON#######################################
+ikjson = InlineKeyboardMarkup(row_width=2)
+json_url = InlineKeyboardButton(text='Регистрация почты', url='https://accounts.google.com/')
+json_video = InlineKeyboardButton(text='Видеоинструкция', url='https://youtu.be/6EZBlu8OHoE')
+json_text = InlineKeyboardButton(text='Инструкция от зенно', url=url_json)
+back_in_captcha = InlineKeyboardButton(text='Назад 🔙', callback_data='back_in_captcha')
+ikjson.add(json_url).add(json_video, json_text).add(back_in_captcha, home)
+
+ikjson1 = InlineKeyboardMarkup(row_width=2)

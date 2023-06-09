@@ -109,6 +109,17 @@ img_vak3 = InputMediaPhoto(vak3, base.vak3)
 #Proxy
 proxy2 = 'AgACAgIAAxkBAAICoGQpTvRoRV2J1zYAAe40yxfnlcHe-AACrsgxG58jSUlh2ZdYE4lsLwEAAwIAA3gAAy8E'
 
+#ZennoLab
+zenno2 = 'AgACAgIAAxkBAAICtGQqlVylS1Dk67prp83xY8E-jQt9AAJ9xDEbSKlYSRLJaxABta_5AQADAgADeQADLwQ'
+img_zenno2 = InputMediaPhoto(zenno2, base.zenno2)
+zenno4 = 'AgACAgIAAxkBAAICwGQqr5w2AiGUosLLZjQNUtYfJWR4AALsxDEbSKlYSe5n62G6xR4LAQADAgADeQADLwQ'
+
+#Captcha
+captcha1 = 'AgACAgIAAxkBAAICzmQryC6w4fe5sAMoQMmcavvQEpJLAAKXyjEbyTNZSdSMRRk7CpouAQADAgADeQADLwQ'
+img_captcha1 = InputMediaPhoto(captcha1, base.captcha1)
+captcha2 = 'AgACAgIAAxkBAAIC0GQryFLbMXSY9KPa-q0ti-s31HYPAAKZyjEbyTNZSd1f3FTqfrXFAQADAgADeQADLwQ'
+img_captcha2 = InputMediaPhoto(captcha2, base.captcha2)
+
 
 #Команда /start
 async def command_start(message : types.Message):
@@ -279,6 +290,43 @@ async def first_call(callback: types.CallbackQuery):
         await callback.message.edit_text(base.proxy1, reply_markup=client_kb.ikproxy1)
     elif callback.data == 'next_proxy1':
         await callback.message.answer_photo(proxy2, base.proxy2, reply_markup=client_kb.ikproxy2)
+        await callback.message.delete()
+    elif callback.data == 'next_proxy2':
+        await callback.message.answer(base.run_zenno, reply_markup=client_kb.ikzenno)
+        await callback.message.delete()
+
+
+    #ZennoLab##############################################################
+    elif callback.data == 'zenno_video':
+        await callback.message.edit_text(base.zenno_video, reply_markup=client_kb.ikzenno_video)
+    elif callback.data == 'next_zenno':
+        await callback.message.edit_text(base.zenno1, reply_markup=client_kb.ikzenno1)
+    elif callback.data == 'next_zenno1':
+        await callback.message.answer_photo(zenno2, base.zenno2, reply_markup=client_kb.ikzenno2)
+        await callback.message.delete()
+    elif callback.data == 'next_zenno2':
+        await callback.message.answer(base.zenno3, reply_markup=client_kb.ikzenno3)
+        await callback.message.delete()
+    elif callback.data == 'next_zenno3':
+        await callback.message.answer_photo(zenno4, base.zenno4, reply_markup=client_kb.ikzenno4)
+        await callback.message.delete()
+
+
+    #Captcha##############################################################
+    elif callback.data == 'next_zenno4':
+        await callback.message.answer(base.run_captcha, reply_markup=client_kb.ikcaptcha)
+        await callback.message.delete()
+    elif callback.data == 'next_captcha':
+        await callback.message.answer_photo(captcha1, base.captcha1, reply_markup=client_kb.ikcaptcha1)
+        await callback.message.delete()
+    elif callback.data == 'next_captcha1':
+        await callback.message.edit_media(img_captcha2, reply_markup=client_kb.ikcaptcha2)
+
+
+    #Json#################################################################
+    elif callback.data == 'next_captcha2':
+        await callback.message.answer(base.run_json, reply_markup=client_kb.ikjson)
+        await callback.message.delete()
 
 
 #####################################Пропустить############################
@@ -291,6 +339,15 @@ async def first_call(callback: types.CallbackQuery):
     #Регистрация аккаунтов
     elif callback.data == 'skip_reg':
         await callback.message.edit_text(base.run_proxy, reply_markup=client_kb.ikproxy)
+    #Proxy
+    elif callback.data == 'skip_proxy':
+        await callback.message.edit_text(base.run_zenno, reply_markup=client_kb.ikzenno)
+    #Zenno
+    elif callback.data == 'skip_zenno':
+        await callback.message.edit_text(base.run_captcha, reply_markup=client_kb.ikcaptcha)
+    #captcha
+    elif callback.data == 'skip_captcha':
+        await callback.message.edit_text(base.run_json, reply_markup=client_kb.ikjson)
 
 
 #####################################Назад#################################
@@ -440,6 +497,35 @@ async def first_call(callback: types.CallbackQuery):
     elif callback.data == 'back_proxy2':
         await callback.message.answer(base.proxy1, reply_markup=client_kb.ikproxy1)
         await callback.message.delete()
+
+    #Назад к прокси#############################################################
+    elif callback.data == 'back_zenno':
+        await callback.message.answer_photo(proxy2, base.proxy2, reply_markup=client_kb.ikproxy2)
+        await callback.message.delete()
+    elif callback.data == 'back_zenno1':
+        await callback.message.edit_text(base.run_zenno, reply_markup=client_kb.ikzenno)
+    elif callback.data == 'back_zenno2':
+        await callback.message.answer(base.zenno1, reply_markup=client_kb.ikzenno1)
+        await callback.message.delete()
+    elif callback.data == 'back_zenno3':
+        await callback.message.answer_photo(zenno2, base.zenno2, reply_markup=client_kb.ikzenno2)
+        await callback.message.delete()
+    elif callback.data == 'back_zenno4':
+        await callback.message.answer(base.zenno3, reply_markup=client_kb.ikzenno3)
+        await callback.message.delete()
+
+    #Назад к зенно#############################################################
+    elif callback.data == 'back_in_zenno':
+        await callback.message.edit_text(base.run_zenno, reply_markup=client_kb.ikzenno)
+    elif callback.data == 'back_captcha1':
+        await callback.message.answer(base.run_captcha, reply_markup=client_kb.ikcaptcha)
+        await callback.message.delete()
+    elif callback.data == 'back_captcha2':
+        await callback.message.edit_media(img_captcha1, reply_markup=client_kb.ikcaptcha1)
+
+    #Назад к капче############################################################
+    elif callback.data == 'back_in_captcha':
+        await callback.message.edit_text(base.run_captcha, reply_markup=client_kb.ikcaptcha)
 
 
 def register_handlers_client(dp : Dispatcher):
